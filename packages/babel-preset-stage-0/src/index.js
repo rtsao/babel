@@ -1,16 +1,12 @@
+import { declare } from "@babel/helper-plugin-utils";
 import presetStage1 from "@babel/preset-stage-1";
 
 import transformFunctionBind from "@babel/plugin-proposal-function-bind";
-import transformLogicalAssignmentOperators from "@babel/plugin-proposal-logical-assignment-operators";
 
-export default function(context, opts = {}) {
-  let loose = false;
-  let useBuiltIns = false;
+export default declare((api, opts = {}) => {
+  api.assertVersion(7);
 
-  if (opts !== undefined) {
-    if (opts.loose !== undefined) loose = opts.loose;
-    if (opts.useBuiltIns !== undefined) useBuiltIns = opts.useBuiltIns;
-  }
+  const { loose = false, useBuiltIns = false, decoratorsLegacy = false } = opts;
 
   if (typeof loose !== "boolean") {
     throw new Error("@babel/preset-stage-0 'loose' option must be a boolean.");
@@ -20,9 +16,22 @@ export default function(context, opts = {}) {
       "@babel/preset-stage-0 'useBuiltIns' option must be a boolean.",
     );
   }
+  if (typeof decoratorsLegacy !== "boolean") {
+    throw new Error(
+      "@babel/preset-stage-0 'decoratorsLegacy' option must be a boolean.",
+    );
+  }
+
+  if (decoratorsLegacy !== true) {
+    throw new Error(
+      "The new decorators proposal is not supported yet." +
+        ' You must pass the `"decoratorsLegacy": true` option to' +
+        " @babel/preset-stage-0",
+    );
+  }
 
   return {
-    presets: [[presetStage1, { loose, useBuiltIns }]],
-    plugins: [transformFunctionBind, transformLogicalAssignmentOperators],
+    presets: [[presetStage1, { loose, useBuiltIns, decoratorsLegacy }]],
+    plugins: [transformFunctionBind],
   };
-}
+});
