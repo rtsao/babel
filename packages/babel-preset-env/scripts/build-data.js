@@ -74,7 +74,9 @@ const interpolateAllResults = (rawBrowsers, tests, source) => {
     let prevBid;
     let ecmascript;
 
-    if (source === "es6") {
+    if (source === "es5") {
+      ecmascript = 5;
+    } else if (source === "es6") {
       ecmascript = 2015;
     } else if (source === "es2016plus") {
       if (category.match(/2016/)) {

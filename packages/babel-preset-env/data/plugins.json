@@ -6,6 +6,7 @@
     "safari": "9",
     "node": "4",
     "ios": "9",
+    "ecmascript": "2015",
     "opera": "28",
     "electron": "0.24"
   },
@@ -16,6 +17,7 @@
     "safari": "9",
     "node": "4",
     "ios": "9",
+    "ecmascript": "2015",
     "opera": "31",
     "electron": "0.31"
   },
@@ -25,8 +27,9 @@
     "safari": "10",
     "node": "6.5",
     "ios": "10",
+    "ecmascript": "2015",
     "opera": "38",
-    "electron": "1.2
+    "electron": "1.2"
   },
   "transform-arrow-functions": {
     "chrome": "47",
@@ -58,6 +61,7 @@
     "safari": "10",
     "node": "5",
     "ios": "10",
+    "ecmascript": "2015",
     "opera": "33",
     "electron": "0.36"
   },
@@ -79,6 +83,7 @@
     "safari": "9",
     "node": "4",
     "ios": "9",
+    "ecmascript": "2015",
     "opera": "30",
     "electron": "0.29"
   },
@@ -100,6 +105,7 @@
     "safari": "7.1",
     "node": "4",
     "ios": "8",
+    "ecmascript": "2015",
     "opera": "31",
     "electron": "0.31"
   },
@@ -121,6 +127,7 @@
     "safari": "10",
     "node": "6",
     "ios": "10",
+    "ecmascript": "2015",
     "opera": "36",
     "electron": "1"
   },
@@ -129,6 +136,7 @@
     "safari": "11.1",
     "node": "8.10",
     "ios": "11.3",
+    "ecmascript": "2018",
     "opera": "49"
   },
   "transform-unicode-regex": {
@@ -138,6 +146,7 @@
     "safari": "10",
     "node": "6",
     "ios": "10",
+    "ecmascript": "2015",
     "opera": "37",
     "electron": "1.1"
   },
@@ -169,6 +178,7 @@
     "safari": "10",
     "node": "6.5",
     "ios": "10",
+    "ecmascript": "2015",
     "opera": "38",
     "electron": "1.2"
   },
@@ -193,17 +203,6 @@
     "ecmascript": "2015",
     "opera": "25",
     "electron": "0.2"
-  },
-  "transform-unicode-regex": {
-    "chrome": "50",
-    "edge": "13",
-    "firefox": "46",
-    "safari": "10",
-    "node": "6",
-    "ios": "10",
-    "ecmascript": "2015",
-    "opera": "37",
-    "electron": "1.1"
   },
   "transform-new-target": {
     "chrome": "46",
@@ -253,6 +252,7 @@
     "chrome": "63",
     "firefox": "57",
     "safari": "tp",
+    "ecmascript": "2018",
     "opera": "50"
   },
   "proposal-object-rest-spread": {
@@ -261,6 +261,7 @@
     "safari": "11.1",
     "node": "8.3",
     "ios": "11.3",
+    "ecmascript": "2018",
     "opera": "47",
     "electron": "2"
   },
@@ -268,6 +269,7 @@
     "chrome": "64",
     "safari": "11.1",
     "ios": "11.3",
+    "ecmascript": "2018",
     "opera": "51"
   },
   "proposal-optional-catch-binding": {
